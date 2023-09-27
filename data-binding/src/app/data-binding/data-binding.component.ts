@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent {
-
   url: string = 'http://loiane.com';
   cursoAngular: boolean = true;
   urlImagem = 'https://picsum.photos/200/300';
