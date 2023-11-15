@@ -7,6 +7,11 @@ import { DiretivaNgswitchComponent } from './diretiva-ngswitch/diretiva-ngswitch
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.component';
 import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.component';
+import { DiretivaNgstyleComponent } from './diretiva-ngstyle/diretiva-ngstyle.component';
+import { FormsModule } from '@angular/forms';
+import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
+import { ExemploNgContentComponent } from './exemplo-ng-content/exemplo-ng-content.component';
+import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,16 @@ import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.co
     DiretivaNgifComponent,
     DiretivaNgswitchComponent,
     DiretivaNgforComponent,
-    DiretivaNgclassComponent
+    DiretivaNgclassComponent,
+    DiretivaNgstyleComponent,
+    OperadorElvisComponent,
+    ExemploNgContentComponent,
+    FundoAmareloDirective
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
