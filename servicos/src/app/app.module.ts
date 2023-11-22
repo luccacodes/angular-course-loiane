@@ -16,7 +16,7 @@ import { CriarCursoComponent } from './criar-curso/criar-curso.component';
     BrowserModule
   ],
   providers: [
-    CursosService
+    // CursosService
   ],
   bootstrap: [AppComponent]
 })
