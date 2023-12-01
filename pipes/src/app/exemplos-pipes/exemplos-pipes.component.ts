@@ -13,4 +13,8 @@ export class ExemplosPipesComponent {
     preco: 44.99,
     dataLancamento: new Date(2023, 10, 25),
   }
+
+  livros: string[] = ['Java', 'Angular'];
+
+  filtro!: string;
 }
