@@ -1,0 +1,17 @@
+<nav>
+  <div>
+    <a routerLink="" href="">Rotas Angular</a>
+    <ul>
+      <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
+      <li routerLinkActive="active"><a routerLink="/cursos">Cursos</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['curso', courseId]">Curso com ID</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <p>Entre com o ID do curso</p>
+  <input type="text" [(ngModel)]="courseId">
+  <router-outlet></router-outlet>
+</div>
+
