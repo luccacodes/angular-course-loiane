@@ -3,7 +3,7 @@
     <a routerLink="" href="">Rotas Angular</a>
     <ul>
       <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
-      <li routerLinkActive="active"><a routerLink="/cursos">Cursos</a></li>
+      <li routerLinkActive="active"><a routerLink="/cursos" [queryParams]="{pagina:1}">Cursos</a></li>
       <li routerLinkActive="active"><a [routerLink]="['curso', courseId]">Curso com ID</a></li>
     </ul>
   </div>
