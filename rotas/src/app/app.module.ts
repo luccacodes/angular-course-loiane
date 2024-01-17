@@ -10,8 +10,8 @@ import { FormsModule } from '@angular/forms';
 // import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 // import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 import { AppRoutingModule } from './app.routing.module';
-import { CursosModule } from './cursos/cursos.module';
-import { AlunosModule } from './alunos/alunos.module';
+// import { CursosModule } from './cursos/cursos.module';
+// import { AlunosModule } from './alunos/alunos.module';
 
 @NgModule({
   declarations: [
@@ -25,8 +25,8 @@ import { AlunosModule } from './alunos/alunos.module';
   imports: [
     BrowserModule,
     FormsModule,
-    CursosModule,
-    AlunosModule,
+    // CursosModule,
+    // AlunosModule,
     AppRoutingModule
     // routing
   ],
