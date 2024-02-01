@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-template-form',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class TemplateFormComponent {
 
+  onSubmit(form: any) {
+    console.log(form)
+  }
 }
