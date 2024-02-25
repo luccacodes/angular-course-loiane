@@ -7,8 +7,13 @@ import {FormsModule} from '@angular/forms';
   styleUrls: ['./template-form.component.scss']
 })
 export class TemplateFormComponent {
+  usuario: any = {
+    nome: null,
+    email: null,
+  }
 
   onSubmit(form: any) {
-    console.log(form)
+    console.log(form.value);
+    console.log(this.usuario);
   }
 }
