@@ -28,7 +28,7 @@
         <div class="col-md-3">
             <label for="cep" class="form-label">CEP</label>
             <input type="text" class="form-control" id="cep" name="cep"
-                ngModel required #cep="ngModel" (blur)="consultaCEP(cep.value)">
+                ngModel required #cep="ngModel" (blur)="consultaCEP(cep.value, f)">
             <div *ngIf="!cep.valid && cep.touched" class="alert alert-danger" role="alert">
                 CEP é obrigatório.
             </div>
@@ -53,6 +53,17 @@
                 ngModel required #complemento="ngModel">
             <div *ngIf="!complemento.valid && complemento.touched" class="alert alert-danger" role="alert">
                 Complemento é obrigatório.
+            </div>
+        </div>
+      </div>
+
+      <div [class.was-validated]="!rua.valid && rua.touched || rua.valid && rua.touched">
+        <div class="col-md-3">
+            <label for="rua" class="form-label">Rua</label>
+            <input type="text" class="form-control" id="rua" name="rua"
+                ngModel required #rua="ngModel">
+            <div *ngIf="!rua.valid && rua.touched" class="alert alert-danger" role="alert">
+                Rua é obrigatório.
             </div>
         </div>
       </div>
