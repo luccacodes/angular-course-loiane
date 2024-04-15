@@ -10,7 +10,7 @@ POST http://localhost:3000/cursos HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Java"
+    "nome": "Java"
 }
 
 ###
@@ -19,10 +19,10 @@ PUT http://localhost:3000/cursos/2 HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Java OO"
+    "nome": "Java OO"
 }
 
 ###
 
-DELETE http://localhost:3000/cursos/3 HTTP/1.1
+DELETE http://localhost:3000/cursos/9152 HTTP/1.1
 content-type: application/json
