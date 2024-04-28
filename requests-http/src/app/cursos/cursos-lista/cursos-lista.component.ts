@@ -41,11 +41,11 @@ export class CursosListaComponent {
       })
     )
 
-    this.service.list().subscribe(
-      dados => console.log(dados),
-      error => console.error(error),
-      () => console.log('Observable completo!')
-    )
+    // this.service.list().subscribe(
+    //   dados => console.log(dados),
+    //   error => console.error(error),
+    //   () => console.log('Observable completo!')
+    // )
   }
 
   handleError() {
