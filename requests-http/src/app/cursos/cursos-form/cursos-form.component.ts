@@ -14,7 +14,7 @@ export class CursosFormComponent {
 
   ngOnInit() {
     this.form = this.fb.group({
-      nome: [null, Validators.required, Validators.minLength(3), Validators.maxLength(250)],
+      nome: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
     });
   }
 
@@ -24,6 +24,7 @@ export class CursosFormComponent {
 
   onSubmit() {
     this.submitted = true;
+    console.log(this.form.value);
     if(this.form.valid) {
       console.log('submit');
     }
