@@ -51,13 +51,39 @@ export class CursosFormComponent {
   onSubmit() {
     this.submitted = true;
     console.log(this.form.value);
+
     if(this.form.valid) {
       console.log('submit');
-      this.cursosService.create(this.form.value).subscribe(
-        success => this.modalService.showAlertSuccess('Curso criado com sucesso'),
-        error => this.modalService.showAlertDanger('Erro ao criar curso, tente novamente'),
+
+      let msgSuccess = 'Curso criado com sucesso';
+      let msgError = 'Erro ao criar curso, tente novamente';
+
+      if (this.form.value.id) {
+        msgSuccess = 'Curso atualizado com sucesso';
+        msgError = 'Erro ao atualizar curso, tente novamente';
+      }
+
+      this.cursosService.save(this.form.value).subscribe(
+        success => {
+          this.modalService.showAlertSuccess(msgSuccess);
+        },
+        error => this.modalService.showAlertDanger(msgError),
         () => console.log('request completo')
       );
+
+      // if (this.form.value.id) {
+      //   this.cursosService.update(this.form.value).subscribe(
+      //     success => this.modalService.showAlertSuccess('Curso atualizado com sucesso'),
+      //     error => this.modalService.showAlertDanger('Erro ao atualizar curso, tente novamente'),
+      //     () => console.log('update completo')
+      //   )
+      // } else {
+      //   this.cursosService.create(this.form.value).subscribe(
+      //     success => this.modalService.showAlertSuccess('Curso criado com sucesso'),
+      //     error => this.modalService.showAlertDanger('Erro ao criar curso, tente novamente'),
+      //     () => console.log('request completo')
+      //   );
+      // }
     }
   }
 

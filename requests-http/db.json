@@ -1,10 +1,6 @@
 {
   "cursos": [
     {
-      "id": "1",
-      "nome": "Angular"
-    },
-    {
       "id": "1f3b",
       "nome": "Java"
     },
@@ -17,10 +13,6 @@
       "nome": "sdasd"
     },
     {
-      "id": "1",
-      "nome": "Angular"
-    },
-    {
       "id": null,
       "nome": "Material"
     },
@@ -29,12 +21,20 @@
       "nome": "Material 2"
     },
     {
-      "id": "1",
-      "nome": "Angularss"
+      "id": null,
+      "nome": "kkkk"
     },
     {
       "id": null,
-      "nome": "kkkk"
+      "nome": "Tstess"
+    },
+    {
+      "id": null,
+      "nome": "Teste 2"
+    },
+    {
+      "id": null,
+      "nome": "Material 4"
     }
   ]
 }
