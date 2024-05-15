@@ -3,6 +3,9 @@
     <input type="file" class="custom-file-input" id="customFile" (change)="onChange($event)">
     <label class="custom-file-label" for="customFile">Selecionar Arquivo</label>
   </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" [style.width]="progress + '%'">{{ progress }}%</div>
+  </div>
 </div>
 
 <div style="margin-top: 10px;">
