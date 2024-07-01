@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable, map, tap } from 'rxjs';
+import { Observable, debounceTime, distinctUntilChanged, filter, map, switchMap, tap } from 'rxjs';
 
 @Component({
   selector: 'app-lib-search',
@@ -11,10 +11,30 @@ import { Observable, map, tap } from 'rxjs';
 export class LibSearchComponent {
   queryField = new FormControl();
   readonly SEARCH_URL = 'https://api.cdnjs.com/libraries';
+  readonly FIELDS = 'name,description,version,homepage';
   results$: Observable<any>;
   total: number;
 
   constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.results$ = this.queryField.valueChanges
+      .pipe(
+        map(value => value.trim()),
+        filter(value => value.length > 1),
+        debounceTime(200),
+        distinctUntilChanged(),
+        tap(value => console.log(value)),
+        switchMap(value => this.http.get(this.SEARCH_URL, {
+          params: {
+            search: value,
+            fields: this.FIELDS,
+          }
+        })),
+        tap((res: any) => this.total = res.total),
+        map((res: any) => res.results)
+      );
+  }
 
   onSearch() {
     const fields = 'name,description,version,homepage';
